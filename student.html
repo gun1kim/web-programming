@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>학생 정보 입력</h1>
+
+    <form action="none" method="get">
+        <label id="name">
+            이름:
+            <input type="text" name="name" id="name">
+        </label><br><br>
+        <label id="age">
+            나이:
+            <input type="number" name="age" id="age" min="0" >
+        </label><br><br>
+        <label id="email">
+            이메일:
+            <input type="email" name="email" id="email">
+        </label><br><br>
+        <label id="phone">
+            전화번호: 
+            <input type="tel" name="phone" id="phone">
+        </label><br><br>
+        관심있는 언어:    
+        <label id="java">
+            <input type="checkbox" name="java" id="java">
+            Java
+        </label>
+        <label id="pyhton">
+            <input type="checkbox" name="python" id="python">
+            Python
+        </label>
+        <label id="C">
+            <input type="checkbox" name="C" id="C">
+            C
+        </label>
+        <label id="cpp">
+            <input type="checkbox" name="cpp" id="cpp">
+            C++
+        </label>
+        <label id="go">
+            <input type="checkbox" name="go" id="go">
+            Go
+        </label>
+        <label id="js">
+            <input type="checkbox" name="js" id="js">
+            JavaScript
+        </label><br><br>
+        좋아하는 음식: 
+        <label id="food">
+            <select name="food" id="food">
+                <option value="kor">한식</option>
+                <option value="jap">일식</option>
+                <option value="chn">중식</option>
+                <option value="wes">양식</option>
+            </select>
+        </label><br><br>
+        성별:
+        <label id="male">
+            <input type="radio" name="gender" id="male" value="male">male
+        </label>
+        <label id="female">
+            <input type="radio" name="gender" id="female" value="female">female
+        </label><br><br>
+
+        <button type="submit">제출</button>
+        
+
+</body>
+</html>
