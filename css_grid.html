@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-rows: minmax(50px, auto);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            background-color: white;
+            border: 1px solid black;
+        }
+        .box {
+            background-color: grey;
+            margin: 5px;
+            padding: 10px;
+        }
+        .items:nth-child(odd) {
+            background-color: grey;
+            margin:5px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores obcaecati, facilis voluptates quidem modi voluptate hic, illo eos totam esse eum quod quibusdam deleniti similique tempora labore! Alias, recusandae.
+        </div>
+        <div class="items">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores obcaecati, facilis voluptates quidem modi voluptate hic, illo eos totam esse eum quod quibusdam deleniti similique tempora labore! Alias, recusandae.
+        </div>
+        <div class="items">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores obcaecati, facilis voluptates quidem modi voluptate hic, illo eos totam esse eum quod quibusdam deleniti similique tempora labore! Alias, recusandae.
+        </div>
+        <div class="items">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores obcaecati, facilis voluptates quidem modi voluptate hic, illo eos totam esse eum quod quibusdam deleniti similique tempora labore! Alias, recusandae.
+        </div>
+        <div class="items">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores obcaecati, facilis voluptates quidem modi voluptate hic, illo eos totam esse eum quod quibusdam deleniti similique tempora labore! Alias, recusandae.
+        </div>
+    </div>
+</body>
+</html>
