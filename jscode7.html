@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = prompt('숫자를 입력하세요');
+
+        // while (input) {
+        //     console.log(input);
+        //     console.log(typeof input);
+        //     if (input == null) {
+        //         document.write('입력해주세요');
+        //         break;
+        //     } else if (parseInt(input) == NaN) {
+        //         document.write('숫자가 아닙니다.');
+        //         break;
+        //     } else {
+        //         var i = 0;
+        //         var sum = 0;
+        //         for (var i = 0; i < input; i++) {
+        //             sum += i;
+        //         }
+        //     }
+        //     document.write('1부터 입력한 수' + i + '까지의 합은:' + sum);
+        // }
+        console.log(input);
+        if (input == null || typeof(input) != 'number') {
+            document.write('잘못된 입력입니다.');
+        }
+        else {
+            var i = 0;
+            var sum = 0;
+            while (i < input) {
+                i += 1;
+                sum += i;                
+            }
+            document.write('1부터 입력한 수' + i + '까지의 합은:' + sum);
+        }
+    </script>
+</body>
+</html>
