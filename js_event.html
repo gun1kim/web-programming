@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script>
+        let div;
+        // function init() {
+        //     let div = document.getElementById("event");
+        //     div.onmouseover = function() {
+        //         div.style.backgroundColor = "orchid";
+        //         div.style.color = "white";
+        //     }
+        //     div.onmouseout = () => {
+        //         div.style.backgroundColor = "white";
+        //         div.style.color = "black";
+        //     }
+        // }
+        function init() {
+            div = document.getElementById("event");
+
+            div.addEventListener("mouseover", over);
+
+            div.addEventListener("mouseout", out);
+        }
+        
+        function over() {
+            div.style.backgroundColor = "orchid";
+            div.style.color = "white";
+        }
+        function out() {
+            div.style.backgroundColor = "white";
+            div.style.color = "black";
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>이벤트 리스너</h3>
+    <hr>
+    <div id="event">
+         <!-- onmouseover="this.style.backgroundColor='orchid'" 
+         onmouseout="this.style.backgroundColor='white'"> --> 
+                마우스를 올리면 orchid 색으로 변경
+    </div>
+</body>
+</html>

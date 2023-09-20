@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addElement() {
+            
+            let li = document.createElement("li");
+            let parent = document.getElementById("parent");
+            li.innerHTML = document.forms["form"].elements["input"].value
+                            + "    <span onclick='delList(this)'>X</span>";
+            let span = document.createElement("span");
+            // span.innerText = "X";
+            // span.style.display = ""
+            // span.onclick = function () {
+            //     parent.removeChild(li);
+            //     parent.removeChild(this);
+            // }
+            parent.appendChild(li);
+            // parent.appendChild(span);
+        }
+        function delList(obj) {
+            let item = obj.parentElement;
+            let list = item.parentElement;
+            list.removeChild(item);
+        }
+    </script>
+</head>
+<body>
+    <h3></h3>
+    <hr>
+    <form name="form" action="none" onclick="event.preventDefault()">
+        입력: <input id="input" name="input" type="text">
+    </form>
+    <button id="add" onClick="javascript:addElement()">추가</button>
+
+    <ul id="parent">
+
+    </ul>
+    
+</body>
+</html>

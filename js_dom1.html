@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 스타일 동적 변경</title>
+    <script>
+        // 버튼을 클릭하면 글자 크기를 30px로, 테두리를 3px dotted magenta
+        function change() {
+            let span = document.getElementById("mySpan");
+            span.style.color = "green";
+            span.style.fontSize = "30px";
+            span.style.display = "block";
+            span.style.border = "3px dotted magenta";
+            span.style.width = "6em";
+            span.style.margin = "20px";
+        }
+    </script>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p id="firstP" style="color: blue; background-color: yellow;" 
+    onClick="this.style.backgroundColor='teal'">
+    이것은    
+        <span id="mySpan" style="color: red;">
+            문장입니다.
+        </span>
+    </p>
+    <button type="button" onClick="change()">스타일 변경</button>
+    <!-- <input type="button" value="스타일 변경" onClick="change()"> -->
+    <script>
+        // const p = document.getElementById("firstP");
+        const p = document.querySelector("#firstP");
+        console.log(`id = ${p.id}`);
+        console.log(`tagName = ${p.tagName}`);
+        console.log(`innerHTML = ${p.innerHTML}`);
+        console.log(`style = ${p.style.color}`);
+        console.log(`childElementCount = ${p.childElementCount}`);
+        console.log(`onClick = ${p.onclick}`);
+
+        const nextP = document.getElementById("nextP");
+        console.log(`id = ${p.id}`);
+        console.log(`tagName = ${p.tagName}`);
+        console.log(`innerHTML = ${p.innerHTML}`);
+        console.log(`style = ${p.style.color}`);
+        console.log(`childElementCount = ${p.childElementCount}`);
+        console.log(`width = ${p.clientWidth}`);
+        console.log(`height = ${p.clientHeight}`);
+    </script>
+</body>
+</html>

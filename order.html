@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문정보</title>
+    <script>
+        function paste() {
+            let checkbox = document.getElementById("check");
+
+            if (checkbox.checked == true) {
+                let name = document.getElementById("name1").value;
+                let phone = document.getElementById("phone1").value;
+                let address = document.getElementById("address1").value;
+
+                document.getElementById("name2").value = name;
+                document.getElementById("phone2").value = name;
+                document.getElementById("address2").value = name;
+                
+            } else {
+                document.getElementById("name2").value = "";
+                document.getElementById("phone2").value = "";
+                document.getElementById("address2").value = "";
+            }
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h3>주문정보</h3>
+    <hr>
+    이름 <input id="name1" type="text">
+    전화번호 <input id="phone1" type="text">
+    주소 <input id="address1" type="text"><br>
+    <input type="checkbox" name="check" id="check" onclick="paste()">주문자 정보와 동일하면 체크<br>
+    이름 <input id="name2" type="text">
+    전화번호 <input id="phone2" type="text">
+    주소 <input id="address2" type="text"><br>
+    
+</body>
+</html>
