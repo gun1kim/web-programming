@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼</title>
+    <script>
+        function findChecked() {
+            let city1 = document.getElementsByName("city");
+            let city2 = document.form.city;
+            let find = null;
+            
+            for (let city of city1) {
+                if (city.checked) {
+                    switch(city.value) {
+                        case '1'    :
+                            console.log("서울이 선택됨");
+                    }
+                    console.log(city.value);
+                    console.log(city.innerText);
+                }
+            }
+
+            for (let i = 0; i < city1.length; i++) {
+                if (city1[i].checked == true) {
+                    find = city1[i];
+                }
+            }
+            if (find == null) {
+                alert("선택된 것이 없음");
+            } else {
+                alert(`선택: ${find.value}`)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>라디오버튼</h3>
+    <hr>
+    <form name="form" action="">
+        <input type="radio" name="city" value="1">서울
+        <input type="radio" name="city" value="2">부산
+        <input type="radio" name="city" value="3">춘천
+        <input type="button" value="find checked" onclick="findChecked()">
+    </form>
+</body>
+</html>

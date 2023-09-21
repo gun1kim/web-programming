@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus 관련 이벤트 리스너</title>
+    <script>
+        function check(obj) {
+            if(obj.value == "") {
+                obj.style.borderColor = "red";
+                obj.focus();
+            } else {
+                obj.style.borderColor = "grey";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>focus 관련 이벤트 리스너</h3>
+    <hr>
+    <form action="">
+        이름 <input type="text" id="name" onblur="check(this)">
+        학번 <input type="text" id="number">
+    </form>
+</body>
+</html>

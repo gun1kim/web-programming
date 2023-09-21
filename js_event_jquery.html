@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#event").on("mouseover", function(e) {
+                $(this).css('backgroundColor', 'orchid');
+                $(this).text("ㅋㅋ");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#event").on("mouseout", function(e) {
+                $(this).css('backgroundColor', 'white');
+                $(this).text("마우스를 올리면 orchid 색으로 변경");
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <h3>이벤트 리스너 jQuery</h3>
+    <hr>
+    <div id="event">
+        마우스를 올리면 orchid 색으로 변경
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function draw(obj) {
+            let cup = document.getElementsByName("cup");
+            let image = document.getElementById("image");
+            for (let i = 0; i < cup.length; i++) {
+                if (cup[i].checked) {
+                    image.src = cup[i].value;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>라디오 버튼으로 선택하면 해당 이미지를 출력하는 웹 페이지</h3>
+    <hr>
+    <form action="" name="form">
+        <input type="radio" name="cup" value="images/cup-1.jpg" onclick="draw(this)">컵1
+        <input type="radio" name="cup" value="images/cup-2.jpg" onclick="draw(this)">컵2
+        <input type="radio" name="cup" value="images/cup-3.jpg" onclick="draw(this)">컵3
+        
+    </form>
+    <img src="" id="image">
+</body>
+</html>

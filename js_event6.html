@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <script>
+        let total = 0;
+        function calculate(obj) {
+            if (obj.checked) {
+                total += parseInt(obj.value);
+            } else {
+                total -= parseInt(obj.value);
+            }
+            // document.getElementById("total").value = total;
+            document.form.total.value = total;
+        }
+    </script>
+</head>
+<body>
+    <h3>Checkbox 관련 이벤트 리스너</h3>
+    <hr>
+    <form name="form" action="">
+        <input type="checkbox" name="cap" value="10000" onclick="calculate(this)">모자 1만원
+        <input type="checkbox" name="shoes" value="30000" onclick="calculate(this)">신발 3만원
+        <input type="checkbox" name="bag" value="80000" onclick="calculate(this)">가방 8만원<br>
+        지불하실 금액 <input type="text" value="0" id="total" name="total" readonly>
+    </form>
+</body>
+</html>
